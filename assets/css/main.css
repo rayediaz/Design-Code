@@ -389,6 +389,9 @@ template {
 [hidden] {
   display: none; }
 
+body {
+  font-family: 'Fira Sans'; }
+
 .gigantic, .huge, .large, .bigger, .big,
 h1, h2, h3, h4, h5, h6 {
   color: #BD5248;
@@ -571,7 +574,8 @@ body {
 @media (max-width: 775px) {
   .home-wrap header {
     width: auto;
-    padding: 20px 0; }
+    padding: 20px 0;
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1); }
     .home-wrap header .header-position {
       width: auto;
       position: relative;
@@ -602,3 +606,45 @@ body {
   @media (max-width: 775px) {
     .home-wrap {
       display: block; } }
+
+.home-sections {
+  -ms-flex: 1;
+      flex: 1; }
+  .home-sections section {
+    padding: 50px; }
+  .home-sections section.vine {
+    padding: 50px 0; }
+  .home-sections .flex {
+    display: -ms-flexbox;
+    display: flex; }
+  .home-sections .flex--center {
+    -ms-flex-pack: center;
+        justify-content: center; }
+  .home-sections .flex--space-around {
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+  .home-sections .order-first {
+    -ms-flex-order: -1;
+        order: -1; }
+
+.col-1 {
+  max-width: 300px;
+  margin: 0 10px;
+  background: pink; }
+
+.col-2 {
+  max-width: 620px;
+  margin: 0 10px;
+  background: honeydew; }
+
+.col-50 {
+  width: 50%;
+  background: #ffff80; }
+
+@media (max-width: 640px) {
+  .home-sections .flex {
+    display: block; }
+    .home-sections .flex .col-1 {
+      max-width: 100%; }
+    .home-sections .flex .col-50 {
+      width: auto; } }
