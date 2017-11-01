@@ -29,7 +29,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
+gulp.task('browser-sync', ['sass', 'jekyll-build', 'jade'], function() {
     browserSync({
         server: {
             baseDir: '_site'
@@ -46,7 +46,7 @@ gulp.task('sass', function () {
         .pipe(sass({
             includePaths: ['css'],
             onError: browserSync.notify
-        }))
+        })).on('error', sass.logError)
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(gulp.dest('_site/assets/css'))
         .pipe(browserSync.reload({stream:true}))
@@ -59,7 +59,9 @@ gulp.task('sass', function () {
 gulp.task('jade', function () {
     gulp
         .src('_jadefiles/*.jade')
-        .pipe(jade())
+        .pipe(jade({
+            pretty: true
+        }))
         .pipe(gulp.dest('_includes/'))
 })
 
@@ -69,8 +71,8 @@ gulp.task('jade', function () {
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 gulp.task('watch', function () {
-    gulp.watch('assets/css/*.scss', ['sass']);
-    gulp.watch(['*.html', '_layouts/*.html', '_includes/*'], ['jekyll-rebuild']);
+    gulp.watch('assets/css/**', ['sass']);
+    gulp.watch(['index.html', '_layouts/*.html', '_includes/*'], ['jekyll-rebuild']);
     gulp.watch('_jadefiles/*.jade', ['jade']);
 });
 

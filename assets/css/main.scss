@@ -4,8 +4,6 @@
 @import "1-base/vars";
 @import "1-base/base";
 
-*, *:before, *:after {
-    box-sizing: border-box;
-}
+@import "2-modules/header";
 
-
+@import "3-layouts/home"
