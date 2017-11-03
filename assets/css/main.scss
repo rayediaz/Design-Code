@@ -1,9 +1,16 @@
+@import "0-tools/_fonts";
 @import "0-tools/normalize";
 @import "0-tools/bourbon/bourbon";
 
 @import "1-base/vars";
 @import "1-base/base";
 
-@import "2-modules/header";
+@import "2-modules/_buttons";
+@import "2-modules/_flex-video";
 
-@import "3-layouts/home"
+@import "3-sections/_header";
+@import "3-sections/_home-about";
+@import "3-sections/_home-youtube";
+@import "3-sections/_home-mentoring";
+
+@import "4-layouts/_home"
