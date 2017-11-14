@@ -1,13 +1,34 @@
 $(function () {
-
   mentoringBubbleClick()
-
-  setInterval(function () {
-    articleTada()
-  }, 4000)
-
+  setInterval(function () { articleTada() }, 4000)
   designBgChange()
+  togglingMenu()
+  smoothScroll(300)
 })
+
+function togglingMenu () {
+  var mobileNavToggle = $('.mobile-nav-toggle'),
+      mobileNav = $('.mobile-nav')
+
+  mobileNavToggle.on('click', function () {
+   mobileNav.toggleClass('is-open')
+  })
+}
+
+
+function smoothScroll (duration) {
+	$('a[href^="#"]').on('click', function(event) {
+
+	    var target = $( $(this).attr('href') );
+
+	    if( target.length ) {
+	        event.preventDefault();
+	        $('html, body').animate({
+	            scrollTop: target.offset().top
+	        }, duration);
+	    }
+	});
+}
 
 // Changin background color on hover section design
 function designBgChange() {
