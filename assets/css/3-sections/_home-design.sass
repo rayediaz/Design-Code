@@ -1,0 +1,54 @@
+.home-sections .design
+  padding: 0
+
+section.design
+  color: white
+
+  .dribbble, .behance
+    background: 
+      color: #ea4c89
+      image: url(/assets/img/design-bg.png)
+      position: center
+    padding: 50px 0
+    transition: background-color 150ms ease-in-out
+
+    &.behance
+      background-color: #1769ff
+
+      .home-cta
+        color: #1769ff
+
+  .home-lead
+    text-align: center
+    font-size: 30px
+
+  .home-cta
+    font-size: 24px
+    color: #ea4c89
+    width: 80%
+    margin: 0 auto
+    padding: 10px 20px
+
+  .design-img-link
+    display: block
+    float: left
+    border: 2px solid white
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.2)
+    margin: 5px
+    width: 50% - 5
+    transition: all 150ms ease-in-out
+
+    &:hover
+      transform: scale(1.1)
+
+    img
+      width: 100%
+      display: block
+      
+  .cf
+    +clearfix
+    margin-bottom: 20px    
+
+  @media (max-width: 640px)
+    .col-1
+      margin: 0 10px
