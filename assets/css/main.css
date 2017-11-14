@@ -719,6 +719,8 @@ section.mentoring {
   background-position: center;
   color: white;
   overflow: hidden; }
+  section.mentoring .col-1:first-child {
+    padding-top: 30px; }
   section.mentoring .home-cta {
     color: #4fa7c1; }
   section.mentoring .faces {
@@ -731,7 +733,7 @@ section.mentoring {
     section.mentoring .faces.launched {
       top: 0px; }
   section.mentoring .home-lead {
-    margin-top: 250px; }
+    margin-top: 300px; }
   section.mentoring .face {
     width: 80px;
     height: 80px;
@@ -772,10 +774,13 @@ section.mentoring {
             transform: scale(1); }
 
 @media (max-width: 640px) {
+  section.mentoring .col-1:first-child {
+    padding-top: 80px;
+    margin-left: 10px; }
   section.mentoring .faces {
     margin: 0;
     width: 805px;
-    margin-left: -50px;
+    margin-left: -45px;
     top: 230px;
     left: 0; }
   section.mentoring .face {
@@ -787,7 +792,9 @@ section.mentoring {
     bottom: 100%;
     left: 0px;
     margin: 0 0 10px 0;
-    box-sizing: border-box; } }
+    box-sizing: border-box; }
+  section.mentoring .home-lead {
+    margin-top: 250px; } }
 
 section.articles {
   background-image: url(../img/article-bg.jpg);
@@ -856,6 +863,11 @@ section.articles {
             transform: translate(0%, 0%) scale(1); }
 
 @media (max-width: 640px) {
+  .col-1:first-child {
+    margin-left: 4px !important; }
+  .home-cta {
+    padding: 10px 0 !important;
+    margin-left: 35px !important; }
   .desc-wrap {
     margin-top: 50px; }
   .article-wrap {
@@ -921,7 +933,11 @@ section.vine {
         margin-left: -25px; } }
   @media (max-width: 385px) {
     section.vine .col-1 iframe {
-      margin-left: -50px; } }
+      margin-left: -13px; } }
+  @media (max-width: 320px) {
+    section.vine iframe {
+      width: 250px;
+      height: 432px; } }
 
 .home-sections .design {
   padding: 0; }
@@ -1085,6 +1101,26 @@ section.podcast {
     color: white;
     background: #00cddc;
     margin-left: 10px; }
+  @media (max-width: 640px) {
+    section.podcast .podcast-content {
+      -ms-flex-direction: column;
+          flex-direction: column;
+      -ms-flex-align: center;
+          align-items: center; }
+    section.podcast .podcast-meta {
+      text-align: center;
+      margin-top: 20px; }
+    section.podcast .podcast-thumb {
+      margin-right: 0; }
+    section.podcast .player {
+      display: none; }
+    section.podcast .title {
+      font-size: 22px;
+      line-height: 1; }
+    section.podcast .date {
+      font-size: 14px; }
+    section.podcast .web {
+      margin-right: 5px; } }
 
 .home-footer a {
   color: white;
@@ -1097,6 +1133,10 @@ section.podcast {
   transition: background 150ms ease-in-out; }
   .home-footer a:hover {
     background: #d82121; }
+
+@media (max-width: 640px) {
+  .home-footer a {
+    font-size: 30px; } }
 
 .home-wrap {
   display: -ms-flexbox;

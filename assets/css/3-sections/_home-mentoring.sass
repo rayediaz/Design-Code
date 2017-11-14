@@ -6,6 +6,9 @@ section.mentoring
   color: white  
   overflow: hidden
 
+  .col-1:first-child
+    padding-top: 30px
+
   .home-cta
     color: #4fa7c1  
 
@@ -22,7 +25,7 @@ section.mentoring
       top: 0px
 
   .home-lead
-    margin-top: 250px
+    margin-top: 300px
 
   .face
     width: 80px
@@ -67,10 +70,14 @@ section.mentoring
 @media (max-width: 640px)
   section.mentoring
 
+    .col-1:first-child
+      padding-top: 80px
+      margin-left: 10px
+
     .faces
       margin: 0
       width: 115px * 7
-      margin-left: -50px
+      margin-left: -45px
       top: 230px
       left: 0
 
@@ -86,3 +93,6 @@ section.mentoring
       left: 0px
       margin: 0 0 10px 0
       box-sizing: border-box 
+
+    .home-lead
+      margin-top: 250px
