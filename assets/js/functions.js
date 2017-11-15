@@ -12,6 +12,7 @@ function togglingMenu () {
 
   mobileNavToggle.on('click', function () {
    mobileNav.toggleClass('is-open')
+   mobileNavToggle.toggleClass('is-open')
   })
 }
 
